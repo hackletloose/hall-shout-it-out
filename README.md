@@ -10,11 +10,11 @@ Whichever account you use must have at least these permissions:
 - api|rcon user|Can message players
 
 ## Mandatory Discord Bot Permissions
--Manage Message
--Read Massage History
--Send Message
--Use Slash Commands
--View Channel
+- Manage Message
+- Read Massage History
+- Send Message
+- Use Slash Commands
+- View Channel
 
 **under Bot (Privileged Gateway Intents)**
 - Presence Intent
