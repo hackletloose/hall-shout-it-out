@@ -4,14 +4,31 @@ This Discord bot allows sending messages to players in a game via the RCON API, 
 - Python 3.8+
 - A Discord Bot Token (can be created from [Discord Developer Portal](https://discord.com/developers/applications))
 - RCON API with valid credentials (username, password, and token)
+
+## Mandatory CRCON Permissions
+Whichever account you use must have at least these permissions:
+- api|rcon user|Can message players
+
+## Mandatory Discord Bot Permissions
+-Manage Message
+-Read Massage History
+-Send Message
+-Use Slash Commands
+-View Channel
+
+**under Bot (Privileged Gateway Intents)**
+- Presence Intent
+- Server Members Intent
+- Message Content Intent
+  
 ## Installation
-**1. lone the Repository**
+**1. Clone the Repository**
    First, clone the repository to your local machine:
 
    ```
    bash
-   git clone https://github.com/yourusername/your-repo-name.git
-   cd your-repo-name
+   git clone https://github.com/hackletloose/hall-shout-it-out.git
+   cd hall-shout-it-out
    ```
 **2. Set Up a Virtual Environment (optional but recommended)**
    Create and activate a Python virtual environment to isolate dependencies:
