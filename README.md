@@ -57,7 +57,7 @@ Whichever account you use must have at least these permissions:
    ```
 **5. Run the Bot**
    ```
-   python bot.py
+   python3 bot.py
    ```
 ## Commands
 /message <message>: Send a message to players with the ability to filter by teams or roles using a dropdown menu.
