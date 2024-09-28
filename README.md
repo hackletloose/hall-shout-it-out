@@ -1,5 +1,13 @@
 # Discord Bot with RCON API Integration
-This Discord bot allows sending messages to players in a game via the RCON API, with role-based and team-based filtering using a dropdown menu. 
+This Discord bot allows sending messages to players in a game via the RCON API, with role-based and team-based filtering using a dropdown menu.
+
+ToDo:
+Execute the following commands after downloading:
+1. Copy the `.env.dist` file to `.env` and enter your values.
+2. Run the command `pip install python-dotenv`.
+3. Copy `shout-it-out.service.dist` to `/etc/systemd/system/shout-it-out.service`
+4. Activate and start the service with `sudo systemctl enable shout-it-out.service` and `sudo systemctl start shout-it-out.service`.
+
 ## Requirements
 - Python 3.8+
 - A Discord Bot Token (can be created from [Discord Developer Portal](https://discord.com/developers/applications))
