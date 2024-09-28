@@ -1,0 +1,12 @@
+[Unit]
+Description=shout-it-out – Use Discord to message players ingame
+After=network.target
+
+[Service]
+User=<your-username>
+WorkingDirectory=/path/to/your/hall-shout-it-out
+ExecStart=/usr/bin/python3 /path/to/your/hall-shout-it-out/shout-it-out.py
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
