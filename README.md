@@ -38,12 +38,49 @@ Whichever account you use must have at least these permissions:
    git clone https://github.com/hackletloose/hall-shout-it-out.git
    cd hall-shout-it-out
    ```
-**2. Set Up a Virtual Environment (optional but recommended)**
-   Create and activate a Python virtual environment to isolate dependencies:
+**2. Edit the environment config file**
+   Now, you're going to create and edit an `.env` file. 
+   Here we'll use `nano`, a simple text editor that runs in text mode.  
+  *You can use any other tool you're used to, either local or getting the file from a SFTP connection.*
+
+> [!CAUTION]
+> Do not edit `.env.dist`.  
+> The file you're about to create must be named `.env`.  
+
+Make a copy of the environnement config file template :
+
+```shell
+cp .env.dist .env
+```
+
+Install the `nano` text editor (debian-based command) :
+
+```shell
+apt update && apt install nano
+```
+
+Launch `nano` to edit the `.env` file :
+
+```shell
+nano .env
+```
+
+> [!TIP]
+> In `nano`, you can move the cursor with the arrow keys.
+
+**2.1 Configure Environment Variables**
    ```
-   python -m venv venv
-   source venv/bin/activate  # On Windows, use `venv\Scripts\activate`
+   DISCORD_BOT_TOKEN=<your-discord-bot-token>
+   USERNAME=<rcon-username>
+   PASSWORD=<rcon-password>
+   API_TOKEN=<rcon-api-token>
+   API_BASE_URL=<rcon-url-example: http://127.0.0.1>
    ```
+
+> [!IMPORTANT]
+> - save the changes with `Ctrl`+`o` (then press the `[ENTER]` key to validate)  
+> - exit nano with `Ctrl`+`x`
+
 **3. Install Dependencies**
    Install the required packages using pip:
    ```
@@ -55,20 +92,12 @@ Whichever account you use must have at least these permissions:
    python-dotenv
    logging
    ```
-**4. Configure Environment Variables**
-   ```
-   DISCORD_BOT_TOKEN=<your-discord-bot-token>
-   USERNAME=<rcon-username>
-   PASSWORD=<rcon-password>
-   API_TOKEN=<rcon-api-token>
-   API_BASE_URL=<rcon-url-example: http://127.0.0.1>
-   ```
 **5. Run the Bot**
    ```
    python3 shout-it-out.py
    ```
 ## Commands
-/message <message>: Send a message to players with the ability to filter by teams or roles using a dropdown menu.
+/message <message>: Send a message to players with the ability to filter by teams or roles using a dropdown menu and OK button.
 ## Logging
 Logs are stored in a file named bot_log.txt. You can configure the logging level and format in the bot.py file.
 ## License
